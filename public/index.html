@@ -1,0 +1,64 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
+    <title>Scramjet</title>
+
+    <link rel="shortcut icon" href="favicon.webp" />
+    <link rel="stylesheet" href="index.css" />
+
+    <!-- Scripts -->
+    <script src="/scram/scramjet.all.js"></script>
+    <script src="baremux/index.js" defer></script>
+    <script src="epoxy/index.js" defer></script>
+    <script src="register-sw.js" defer></script>
+    <script src="search.js" defer></script>
+    <script src="index.js" defer></script>
+  </head>
+
+  <body>
+    <!-- Chrome-like Header -->
+    <div class="chrome-frame">
+      <div class="tab-bar">
+        <div class="tab active">
+          <span>New Tab</span>
+          <span class="tab-close">×</span>
+        </div>
+        <div class="window-controls">
+          <span class="minimize">🗕</span>
+          <span class="maximize">🗖</span>
+          <span class="close">🗙</span>
+        </div>
+      </div>
+
+      <!-- Toolbar -->
+      <div class="toolbar">
+        <div class="nav-buttons">
+          <button type="button">&lt;</button>
+          <button type="button">&gt;</button>
+          <button type="button">⟳</button>
+        </div>
+
+        <form id="sj-form" class="toolbar-form">
+          <input id="sj-search-engine" value="https://www.google.com/search?q=%s" type="hidden" />
+          <input id="sj-address" class="omnibox" type="text" placeholder="Search the web freely" />
+        </form>
+
+        <div class="toolbar-buttons">
+          <button title="Extensions" type="button">🧩</button>
+          <button title="Profile" type="button">👤</button>
+          <button title="Menu" type="button">☰</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Content (empty, no Scramjet branding or description) -->
+    <div id="main-content" class="content">
+      <!-- Intentionally left blank -->
+    </div>
+
+    <!-- Iframe for Proxied Page -->
+    <iframe id="sj-frame" style="display: none;"></iframe>
+  </body>
+</html>
